@@ -8,10 +8,10 @@ import './index.css'
 
 const nav = [
   { id: 'home', label: 'Home', icon: '🏠' },
-  { id: 'resume', label: 'Resume Analyzer', icon: '📄' },
-  { id: 'roadmap', label: 'Skill Roadmap', icon: '🗺️' },
-  { id: 'interview', label: 'Interview Sim', icon: '🎯' },
-  { id: 'chat', label: 'Mentor Chat', icon: '💬' },
+  { id: 'resume', label: 'Resume', icon: '📄' },
+  { id: 'roadmap', label: 'Roadmap', icon: '🗺️' },
+  { id: 'interview', label: 'Interview', icon: '🎯' },
+  { id: 'chat', label: 'Mentor', icon: '💬' },
 ]
 
 export default function App() {
@@ -44,13 +44,23 @@ export default function App() {
           <div className="sidebar-user">
             <div className="user-avatar">S</div>
             <div>
-              <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)' }}>Sai Kolluri</div>
-              <div style={{ fontSize: 11, color: 'var(--text3)' }}>AI Graduate</div>
+              <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)' }}>Sai Chowdary</div>
+              <div style={{ fontSize: 11, color: 'var(--text3)' }}>CS Student</div>
             </div>
           </div>
         </div>
       </div>
-      <div className="main"><Page setPage={setPage} /></div>
+
+      <div className="main">
+        {/* Mobile header */}
+        <div className="mobile-header">
+          <div className="logo-mark">
+            <div className="logo-icon" style={{ width: 28, height: 28, fontSize: 14 }}>🤝</div>
+            <div style={{ fontSize: 14, fontWeight: 800 }}>S.AI Career <span style={{ color: 'var(--accent)' }}>Copilot</span></div>
+          </div>
+        </div>
+        <Page setPage={setPage} />
+      </div>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const api = axios.create({ baseURL: 'http://localhost:8000' })
+const api = axios.create({ baseURL: 'https://ai-career-copilot-backend-9qp3.onrender.com' })
 
 export const uploadResume = (file) => {
   const form = new FormData()
